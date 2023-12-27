@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile-card</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .profile-card {
+            width: 350px;
+            height: 450px;
+            padding: 15px 25px;
+            background-color: whitesmoke;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: column;
+            box-shadow: 5px 5px 5px  rgba(0, 0, 0, 0.3);
+            position: relative;
+            z-index: 1;
+            border-radius: 10px;
+        }
+
+        .profile-card::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 150px;
+            background-color: #2B3499;
+            z-index: -1;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .image-outer {
+            margin-top: 20px;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+
+        .image {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+           border: 3px solid #2B3499;
+            object-fit: cover;
+            object-position:  100% 30%;
+        }
+
+        .heading {
+            margin-top: 10px;
+        }
+
+        .heading h1 {
+            font-weight: 600;
+            font-size: 25px;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+
+        .heading h3 {
+            letter-spacing: 1px;
+            font-size: 20px;
+            font-weight: 500;
+            margin-top: 5px;
+        }
+
+        .social-icon {
+            display: flex;
+            justify-content: flex-start;
+            margin-top: 20px;
+        }
+
+        .social-icon .link {
+            color: whitesmoke;
+            border-radius: 50%;
+            height: 30px;
+            width: 30px;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 20px;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+        .btn {
+            margin-top: 30px;
+        }
+
+        .btn button {
+            background-color: #2B3499;
+            padding: 10px 24px;
+            border-radius: 25px;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            border: none;
+            margin-left: 10px;
+            color: whitesmoke;
+            cursor: pointer;
+        }
+
+        .btn button:hover {
+            background-color: #3841a3;
+        }
+
+        .logo-with-text {
+            margin-top: 25px;
+            display: flex;
+            justify-content: flex-start;
+            gap: 20px;
+            margin-left: 15px;
+        }
+
+        .logo-with-text a {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            padding-right: 10px;
+            border-right: 1px solid rgb(173, 170, 170);
+        }
+        
+        .logo-with-text a:last-child {
+            border-right: none;
+        }
+
+        @media(max-width: 375px)
+        {
+           .profile-card {
+            width: 80%;
+            height: 65%;
+           }
+
+           .image-outer {
+            width: 100px;
+            height: 100px;
+           }
+
+           .profile-card::after {
+            height: 100px;
+           }
+
+           .heading h1 {
+            font-size: 18px;
+           }
+
+           .heading h3 {
+            font-size: 16px;
+            margin-bottom: 5px;
+           }
+
+           .social-icon {
+            margin-top: 10px;
+           }
+           .social-icon .link {
+            height: 20px;
+            width: 20px;
+            font-size: 12px;
+            padding: 15px;
+           }
+
+           .btn {
+            margin-top: 25px;
+           }
+           .btn button {
+            font-size: 10px;
+           }
+
+           .logo-with-text a {
+            font-size: 14px;
+           }
+        
+        }
+
+        @media(max-width: 320px) {
+
+            .social-icon{
+                margin-top: 10px;
+            }
+            .social-icon .link {
+                margin-left: 10px;
+            }
+    
+            .btn {
+                margin-top: 15px;
+            }
+            .btn button {
+                font-size: 8px;
+            }
+
+            .logo-with-text a {
+                font-size: 12px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="profile-card">
+        <div class="image-outer">
+            <img src="./pexels-pixabay-220453.jpg" alt="" class="image" width="100px" height="100px">
+        </div>
+
+        <div class="heading">
+            <h1>CodingLab</h1>
+            <h3>Youtuber & Blogger</h3>
+        </div>
+
+        <div class="social-icon">
+            <a href="" class="link" style="background-color: #1877F2;"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="" class="link" style="background-color: #cd486b;"><i class="fa-brands fa-instagram"></i></a>
+            <a href="" class="link" style="background-color: #1DA1F2;"><i class="fa-brands fa-twitter"></i></a>
+            <a href="" class="link" style="background-color: #0077b5;"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+
+        <div class="btn">
+            <button>Subscribe</button>
+            <button>Message</button>
+        </div>
+
+        <div class="logo-with-text">
+            <a>
+                <i class="fa-regular fa-heart"></i>
+                <span>60.4k</span>
+            </a>
+            <a>
+                <i class="fa-regular fa-comment"></i>
+                <span>60.4k</span>
+            </a>
+            <a>
+                <i class="fa-regular fa-share-from-square"></i>
+                <span>60.4k</span>
+            </a>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
